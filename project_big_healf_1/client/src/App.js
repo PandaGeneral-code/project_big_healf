@@ -1,7 +1,9 @@
 import React, { useRef, useState } from "react";
 
-import RootWrapper from "./styled";
+import { BodyPartPicker } from "@components";
 import { useUtilsHooks } from "@hooks";
+
+import RootWrapper from "./styled";
 
 const App = () => {
   const rootWrapperActivatedRef = useRef(false);
@@ -20,6 +22,7 @@ const App = () => {
     <RootWrapper activated={rootWrapperActivated}>
       <div>App</div>
       <button onClick={handleClick}>TEST</button>
+      <BodyPartPicker />
       <pre>{JSON.stringify({ utils }, null, 2)}</pre>
     </RootWrapper>
   );
