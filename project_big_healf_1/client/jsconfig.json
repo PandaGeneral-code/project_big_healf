@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "@hooks": ["hooks/index"],
+      "@store": ["store/index"],
+      "@theme": ["utils/theme/index"]
+    }
+  },
+  "include": ["src"]
+}
