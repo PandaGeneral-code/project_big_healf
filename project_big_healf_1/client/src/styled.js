@@ -2,10 +2,12 @@ import styled from "styled-components";
 
 const RootWrapper = styled.div`
   background: ${({
+    activated,
     theme: {
-      colors: { red },
+      colors: { blue, red },
     },
-  }) => red};
+  }) => (activated ? blue : red)};
+  transition: background 0.5s ease-in-out 1s;
 `;
 
 export default RootWrapper;
