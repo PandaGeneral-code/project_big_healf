@@ -1,6 +1,7 @@
 const path = require("path");
 
 const alias = (prefix = "src") => ({
+  "@components": `${prefix}/components`,
   "@hooks": `${prefix}/hooks`,
   "@store": `${prefix}/store`,
   "@theme": `${prefix}/utils/theme`,

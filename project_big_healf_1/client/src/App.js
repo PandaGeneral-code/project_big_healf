@@ -1,11 +1,9 @@
 import React from "react";
 
+import RootWrapper from "./styled";
+
 const App = () => {
-  return (
-    <>
-      <div>App</div>
-    </>
-  );
+  return <RootWrapper>App</RootWrapper>;
 };
 
 export default App;

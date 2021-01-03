@@ -1,1 +1,1 @@
-export { themeTest } from "./themeTest";
+export * as colors from "./colors";
