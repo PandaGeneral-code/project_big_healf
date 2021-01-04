@@ -1,29 +1,14 @@
-import React, { useRef, useState } from "react";
+import React from "react";
 
-import { BodyPartPicker } from "@components";
-import { useUtilsHooks } from "@hooks";
+import { BodyPartPicker, Timer } from "@components";
 
 import RootWrapper from "./styled";
 
 const App = () => {
-  const rootWrapperActivatedRef = useRef(false);
-  const [rootWrapperActivated, setRootWrapperActivated] = useState(
-    rootWrapperActivatedRef.current
-  );
-  const { test, utils } = useUtilsHooks();
-
-  const handleClick = () => {
-    test();
-    rootWrapperActivatedRef.current = !rootWrapperActivatedRef.current;
-    setRootWrapperActivated(() => rootWrapperActivatedRef.current);
-  };
-
   return (
-    <RootWrapper activated={rootWrapperActivated}>
-      <div>App</div>
-      <button onClick={handleClick}>TEST</button>
+    <RootWrapper>
       <BodyPartPicker />
-      <pre>{JSON.stringify({ utils }, null, 2)}</pre>
+      <Timer />
     </RootWrapper>
   );
 };
